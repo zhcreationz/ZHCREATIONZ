@@ -1071,3 +1071,14 @@ scroll-behavior: auto;
     color:#C13584;
     letter-spacing:1px;
 }
+
+@media screen and (max-width:768px){
+    .logo img{
+        width:75px;
+        height:75px;
+        object-fit:contain;
+        border-radius:50%;
+        display:block;
+        margin:0 auto;
+    }
+}
