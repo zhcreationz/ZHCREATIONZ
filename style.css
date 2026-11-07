@@ -647,6 +647,9 @@ html {
 }
 
 .logo {
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
     font-size: 26px;
 }
 
@@ -1074,8 +1077,8 @@ scroll-behavior: auto;
 
 @media screen and (max-width:768px){
     .logo img{
-        width:75px;
-        height:75px;
+        width:55px;
+        height:55px;
         object-fit:contain;
         border-radius:50%;
         display:block;
