@@ -1079,6 +1079,9 @@ scroll-behavior: auto;
     .logo img{
         width:55px;
         height:55px;
+        min-width:55px;
+        max-width:55px;
+        flex-shrink:0;
         object-fit:contain;
         border-radius:50%;
         display:block;
