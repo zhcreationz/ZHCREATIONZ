@@ -1076,15 +1076,18 @@ scroll-behavior: auto;
 }
 
 @media screen and (max-width:768px){
-    .logo img{
+    .logo img,
+    header img {
         width:55px;
-        height:55px;
-        min-width:55px;
-        max-width:55px;
-        flex-shrink:0;
-        object-fit:contain;
-        border-radius:50%;
-        display:block;
-        margin:0 auto;
+        height:55px;      
     }
 }
+
+.logo img,
+header img {
+     width:65px;
+     height:65px;
+     object-fit:contain;
+     aspect-ratio:1/1;
+     flex-shrink:0;
+   }
