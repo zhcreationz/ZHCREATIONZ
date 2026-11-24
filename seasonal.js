@@ -23,7 +23,7 @@ async function displaySeasonalCollections() {
         .from('seasonal_collections')
         .select('id, title, description')
         .eq('is_active', true)
-        .limit(1)
+        .limit(4)
         .maybeSingle();
 
     if (collectionError) {
