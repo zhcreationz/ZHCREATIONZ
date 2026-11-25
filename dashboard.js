@@ -146,36 +146,14 @@ async function loadCollections() {
 
 // ACTIVATE / DEACTIVATE COLLECTION
 async function toggleCollection(collection) {
-    if (collection.is_active) {
-        const { error } = await supabase
-            .from('seasonal_collections')
-            .update({ is_active: is_active })
-            .eq('id', collection.id);
+    const { error } = await supabase
+        .from('seasonal_collections')
+        .update({ is_active: !collection.is_active })
+        .eq('id', collection.id);
 
-        if (error) {
-            showMessage(error.message);
-            return;
-        }
-    } else {
-        const { error: deactivateError } = await supabase
-            .from('seasonal_collections')
-            .update({ is_active: false })
-            .eq('is_active', true);
-
-        if (deactivateError) {
-            showMessage(deactivateError.message);
-            return;
-        }
-
-        const { error } = await supabase
-            .from('seasonal_collections')
-            .update({ is_active: true })
-            .eq('id', collection.id);
-
-        if (error) {
-            showMessage(error.message);
-            return;
-        }
+    if (error) {
+        showMessage(error.message);
+        return;
     }
 
     showMessage('Collection status updated!');
