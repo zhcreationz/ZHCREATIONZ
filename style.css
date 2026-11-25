@@ -1141,13 +1141,20 @@ scroll-behavior: auto;
 /* Separate product grid for every collection */
 
 .seasonal-product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 25px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    align-items: stretch;
+    overflow-x: auto;
+    padding: 10px 5px 20px;
+}
+
+.seasonal-product-grid .product-card {
+    flex: 0 0 260px;
+    width: 260px;
 }
 
 /* Seasonal product cards use original card design */
