@@ -1233,12 +1233,50 @@ scroll-behavior: auto;
     align-items: flex-start;
 }
 
+
+/* SEASONAL COLLECTION - ORIGINAL WEBSITE LAYOUT */
+
+.seasonal-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.seasonal-product-grid .product-card {
+    min-width: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1px solid rgba(197, 164, 93, 0.25);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
 .seasonal-product-grid .product-card img {
     width: 100%;
     height: 250px;
     min-height: 250px;
     object-fit: cover;
     border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .seasonal-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seasonal-product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 }
 
 .seasonal-product-grid .product-card h3 {
