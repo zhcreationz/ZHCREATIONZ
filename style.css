@@ -1141,10 +1141,11 @@ scroll-behavior: auto;
 /* Separate product grid for every collection */
 
 .seasonal-product-grid {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     align-items: stretch;
 }
