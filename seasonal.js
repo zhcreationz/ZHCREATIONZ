@@ -22,9 +22,7 @@ async function displaySeasonalCollections() {
     const { data: collection, error: collectionError } = await supabase
         .from('seasonal_collections')
         .select('id, title, description')
-        .eq('is_active', true)
-        .limit(1)
-        .maybeSingle();
+        .eq('is_active', true);
 
     if (collectionError) {
         console.error('Seasonal collection error:', collectionError.message);
