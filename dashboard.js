@@ -149,7 +149,7 @@ async function toggleCollection(collection) {
     if (collection.is_active) {
         const { error } = await supabase
             .from('seasonal_collections')
-            .update({ is_active: false })
+            .update({ is_active: is_active })
             .eq('id', collection.id);
 
         if (error) {
