@@ -1188,3 +1188,85 @@ scroll-behavior: auto;
     }
 
     
+/* SEASONAL COLLECTIONS - MATCH ORIGINAL DESIGN */
+
+.seasonal-section {
+    padding: 60px 6%;
+    background: transparent;
+}
+
+.seasonal-collection-block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.seasonal-collection-block h2 {
+    color: var(--green-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.seasonal-collection-block > p {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* Reuse original product card design */
+
+.seasonal-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.seasonal-product-grid .product-card {
+    min-width: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.seasonal-product-grid .product-card img {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.seasonal-product-grid .product-card h3 {
+    margin-top: 12px;
+}
+
+.seasonal-product-grid .product-card .button {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .seasonal-section {
+        padding: 35px 5%;
+    }
+
+    .seasonal-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .seasonal-product-grid .product-card {
+        padding: 10px;
+    }
+
+    .seasonal-product-grid .product-card img {
+        height: 180px;
+        min-height: 180px;
+    }
+}
+
